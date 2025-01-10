@@ -1,0 +1,163 @@
+body {
+    font-family: Times New Roman, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        background: red;
+        text-align: center;
+        color: white;
+        margin-bottom: 25px;
+
+        .titre-conteneur {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Dubai, sans-serif;
+        }
+
+        .titre-conteneur h1, .titre-conteneur h5 {
+            margin: 1px;
+        }
+
+        .titre-conteneur h5 {
+            color: black;
+            margin-top: 13px;
+        }
+
+        .encadrer {
+            border: 2px solid white;
+        }
+
+        aside {
+            background: white;
+            color: black;
+            height: 25px;
+            font-size: large;
+        }
+
+        nav {
+            background: black;
+
+            .article, .recherche, .index {
+                text-decoration: none;
+                color: white;
+            }
+
+        }
+    }
+
+    section {
+        font-size: large;
+        flex: 1;
+
+        .centrer {
+            margin: auto;
+            width: 80%;
+        }
+
+        .lien {
+            color: red;
+        }
+
+        .TexteSizeS {
+            font-size: small;
+        }
+
+        .TexteSizeXS {
+            font-size: x-small;
+        }
+
+        .sommaire {
+            padding-left: 10px;
+        }
+
+        .custom-list {
+            padding: 0;
+            list-style: none;
+
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 10px;
+            margin: 5px 0;
+        }
+
+        .custom-list li::before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            color: black;
+        }
+
+        .heure {
+            color: red;
+            font-size: small;
+        }
+
+        .police {
+            font-family: Dubai, sans-serif;
+        }
+
+        .image {
+            height: auto;
+            width: 100%;
+        }
+
+        .separator {
+            border-left: 1px solid red;
+            height: auto;
+            padding-left: 10px;
+        }
+
+        form {
+            display: block;
+            margin-bottom: 35px;
+            font-size: small;
+            background-color: rgba(189, 189, 189, 0.3);
+            border-radius: 30px;
+            flex: 1;
+
+            h2 {
+                margin-left: 20px;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+        .form-group label {
+            display: inline-block;
+            max-width: 150px;
+        }
+
+        .form-group input, .form-group select {
+            display: inline-block;
+            width: 50%;
+        }
+
+        button {
+            margin: 20px;
+            width: 350px;
+        }
+    }
+
+    Footer {
+        margin-top: 35px;
+        border-top: 3px solid red;
+        text-align: center;
+        border-bottom: 3px solid red;
+
+        .middot {
+            color: red;
+        }
+    }
+}
