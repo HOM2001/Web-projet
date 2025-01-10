@@ -2,8 +2,8 @@
 require_once "../config/app.php";
 require_once "../config/model.php";
 
-/**
- * include all MVC PHP files
+/*
+ * include all the php files
  */
 function include_mvc_php_files()
 {

@@ -1,4 +1,7 @@
 <?php
+/*
+ * Database setting
+ */
 const SERVER = "home";
 
 const DATABASE_TYPE = "Mysql";

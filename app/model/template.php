@@ -1,5 +1,8 @@
 <?php
 
+/*
+ * return a array of the item in the file
+ */
 function get_menu_csv()
 {
     $fn = '../asset/database/menu.csv';

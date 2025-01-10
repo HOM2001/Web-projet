@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * a function that return the head , body and foot of the page
+ */
 function main_home()
 
 {

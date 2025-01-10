@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * Display a static menu with the link => head
+ * display our group name and our indivudials names
+ */
 function html_head($menu_a = [], $user_id = "", $user_role = "")
 {
     $debug = false;
@@ -54,7 +57,7 @@ function html_foot()
     </main>
     <footer>
         <hr/>
-        Made by Owaiss Hamid and Imane Amane
+        Groupe G : Hamid Owaiss , Imane Amane
 
     </footer>
     </body>

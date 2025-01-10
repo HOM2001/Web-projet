@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * display the login , log out , a link to home
+ * close and open the form
+ */
 function html_logout_button()
 {
     ob_start();
@@ -10,14 +13,14 @@ function html_logout_button()
     return ob_get_clean();
 }
 
-//function html_login_button()
-//{
-//    ob_start();
-//    ?>
-    <!--    <a href="?page=login&action=login">log in</a>-->
-    <!--    --><?php
-//    return ob_get_clean();
-//}
+function html_login_button()
+{
+    ob_start();
+    ?>
+    <a href="?page=login&action=login">log in</a>
+    <?php
+    return ob_get_clean();
+}
 function html_unidentified_user($user = null)
 {
     return <<< HTML

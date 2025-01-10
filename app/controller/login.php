@@ -1,4 +1,7 @@
 <?php
+/*
+ * a function that return if the user is logged or log out
+ */
 function main_login()
 {
     $action = $_GET['action'] ?: "";

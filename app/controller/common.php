@@ -1,6 +1,8 @@
 <?php
 
-
+/*
+ * get the user information
+ */
 function get_user_info()
 {
     // get  info on user

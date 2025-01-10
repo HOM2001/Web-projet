@@ -1,4 +1,7 @@
 <?php
+/*
+ * check if the username in the file is true and false
+ */
 function check_login($input)
 {
     try {
