@@ -2,7 +2,7 @@
 
 function get_menu_csv()
 {
-    $fn = '../assets/database/menu.csv';
+    $fn = '../asset/database/menu.csv';
     $menu_csv = file_get_contents($fn);
     $menu_a = explode("\n", $menu_csv);
     $menu_tab = [];

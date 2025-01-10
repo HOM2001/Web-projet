@@ -25,7 +25,10 @@ function include_mvc_php_files()
 session_start();
 
 include_mvc_php_files();
-
-$page = $_REQUEST['page'] ?: 'home';
-$main = "main_$page";
+if (isset($_REQUEST['page'])) {
+    $page = $_REQUEST['page'];
+} else {
+    $page = 'home';
+}
+$main = "main_{$page}";
 echo $main();

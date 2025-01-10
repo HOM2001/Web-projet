@@ -1,6 +1,6 @@
 <?php
 
-function html_head($menu_a = [])
+function html_head($menu_a = [], $user_id = "", $user_role = "")
 {
     $debug = false;
     ob_start();
@@ -13,6 +13,7 @@ function html_head($menu_a = [])
               integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
               crossorigin="anonymous">
         <link rel="stylesheet" href="/public/css/main.css">
+
     </head>
     <body>
     <header>
@@ -30,7 +31,7 @@ function html_head($menu_a = [])
 HTML;
         }
         ?>
-
+        Welcome , <?= $user_id ?> (<?= $user_role ?>).
     </header>
     <main>
     <?php
@@ -52,6 +53,8 @@ function html_foot()
     ?>
     </main>
     <footer>
+        <hr/>
+        Made by Owaiss Hamid and Imane Amane
 
     </footer>
     </body>
