@@ -5,7 +5,7 @@
 function check_login($input)
 {
     try {
-        $f = fopen("../../asset/database/menu.csv", "r");
+        $f = fopen("../asset/database/login.csv", "r");
         while (!feof($f)) {
             $line = fgets($f);
             $user_info = explode(";", trim($line));

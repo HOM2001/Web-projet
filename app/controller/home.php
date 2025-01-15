@@ -5,9 +5,9 @@
 function main_home()
 
 {
-    $menu_a = get_menu_csv();
+
     return join("\n", [
-        html_head($menu_a),
+        ctrl_head(),
         html_body(),
         html_foot(),
 

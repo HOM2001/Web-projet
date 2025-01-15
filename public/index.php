@@ -1,6 +1,6 @@
 <?php
-require_once "../config/app.php";
-require_once "../config/model.php";
+require_once "../app/config/app.php";
+require_once "../app/config/model.php";
 
 /*
  * include all the php files
@@ -25,10 +25,6 @@ function include_mvc_php_files()
 session_start();
 
 include_mvc_php_files();
-if (isset($_REQUEST['page'])) {
-    $page = $_REQUEST['page'];
-} else {
-    $page = 'home';
-}
-$main = "main_{$page}";
+$page = @$_REQUEST['page'] ?: 'home';
+$main = "main_$page";
 echo $main();

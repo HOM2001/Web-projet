@@ -4,7 +4,7 @@
  */
 function main_login()
 {
-    $action = $_GET['action'] ?: "";
+    $action = @$_GET['action'] ?: "";
     $msg = '';
 
 
@@ -21,7 +21,7 @@ function main_login()
         if (!$valide) {
 
             session_unset();
-            $msg = "Vous n'êtes pas identifié.";
+            $msg = " Vous n'êtes pas identifié.";
         }
     }
 
@@ -34,7 +34,7 @@ function main_login()
     }
 
     return join("\n", [
-        get_user_info(),
+        ctrl_head(),
         html_open_form(),
         $msg,
         html_link_home(),

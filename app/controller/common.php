@@ -3,9 +3,9 @@
 /*
  * get the user information
  */
-function get_user_info()
+function ctrl_head()
 {
-    // get  info on user
+    // get user info
     $user_id = $_SESSION['id'] ?: '';
     $user_role = $_SESSION['role'] ?: '';
 
