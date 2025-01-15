@@ -8,17 +8,17 @@ function check_login($input)
         $f = fopen("../asset/database/login.csv", "r");
         while (!feof($f)) {
             $line = fgets($f);
-            $user_info = explode(";", trim($line));
+            $user_info = explode("|", trim($line));
             if ($user_info[0] == $input) {
                 echo " Vous avez été indentifié ";
 
                 fclose($f);
-                return true;
+                return array(true, $user_info[0], $user_info[2]);
             }
 
         }
         fclose($f);
-        return false;
+        return array(false, null, null);
 
     } catch (Exception $e) {
         echo "Problem while reading file login.csv : " . $e->getMessage();

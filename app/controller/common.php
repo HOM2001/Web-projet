@@ -6,8 +6,8 @@
 function ctrl_head()
 {
     // get user info
-    $user_id = $_SESSION['id'] ?: '';
-    $user_role = $_SESSION['role'] ?: '';
+    $user_id = isset($_SESSION['id']) ? $_SESSION['id'] : '';
+    $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
 
     // get menu array from csv
     $menu_csv = get_menu_csv();

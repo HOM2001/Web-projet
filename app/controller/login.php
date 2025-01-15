@@ -14,7 +14,7 @@ function main_login()
         $msg = 'Vous êtes déloggué. ';
     }
 
-    if (!empty($_POST['identifier'])) {
+    if (isset($_POST['identifier'])) {
 
         list($valide, $_SESSION['id'], $_SESSION['role']) = check_login($_POST['identifier']);
 

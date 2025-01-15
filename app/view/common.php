@@ -3,7 +3,7 @@
  * Display a static menu with the link => head
  * display our group name and our indivudials names
  */
-function html_head($menu_a = [], $user_id = '', $user_role = '')
+function html_head($menu_a = [], $user_id = "", $user_role = "")
 {
     $debug = false;
     ob_start();
@@ -39,16 +39,16 @@ HTML;
     </header>
     <main>
     <?php
-//
-//    if ($debug) {
-//        echo "<pre>";
-//        var_dump($_COOKIE);
-//        var_dump($_SESSION);
-//        var_dump($_GET);
-//        var_dump($_POST);
-//        echo "</pre>";
-//    }
-//    return ob_get_clean();
+
+    if ($debug) {
+        echo "<pre>";
+        var_dump($_COOKIE);
+        var_dump($_SESSION);
+        var_dump($_GET);
+        var_dump($_POST);
+        echo "</pre>";
+    }
+    return ob_get_clean();
 }
 
 function html_foot()
