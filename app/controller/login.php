@@ -13,13 +13,20 @@ function main_login()
         session_unset();
         $msg = 'Vous êtes déloggué. ';
     }
+
     if (isset($_POST['identifier'])) {
+        $login = $_POST['identifier'];
+        list($valide, $_SESSION['id'], $_SESSION['role']) = check_login($login);
 
-        list($valide, $_SESSION['id'], $_SESSION['role']) = check_login($_POST['identifier']);
+        if ($valide) {
 
-        if (!$valide) {
 
-            session_unset();
+            setcookie("name", $_SESSION['id'], time() + 60 * 2);
+
+
+        } else {
+            setcookie('id', 0, 0, "/");
+            //  session_unset();
             $msg = " Vous n'êtes pas identifié.";
         }
     }

@@ -40,8 +40,8 @@ HTML;
     <main>
     <?php
 
-//    if ($debug) {
-//        echo "<pre>";
+    if ($debug) {
+        echo "<pre>";
 //      var_dump($_COOKIE);
 //      var_dump($_SESSION);
 //      var_dump($_GET);
@@ -49,8 +49,9 @@ HTML;
 //       var_dump(check_login("Owaiss"));
 //       var_dump($user_role, $user_id);
 //        var_dump(check_login($user_id));
-//        echo "</pre>";
-//    }
+
+        echo "</pre>";
+    }
     return ob_get_clean();
 }
 
