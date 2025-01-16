@@ -40,14 +40,17 @@ HTML;
     <main>
     <?php
 
-    if ($debug) {
-        echo "<pre>";
-        var_dump($_COOKIE);
-        var_dump($_SESSION);
-        var_dump($_GET);
-        var_dump($_POST);
-        echo "</pre>";
-    }
+//    if ($debug) {
+//        echo "<pre>";
+//      var_dump($_COOKIE);
+//      var_dump($_SESSION);
+//      var_dump($_GET);
+//     var_dump($_POST);
+//       var_dump(check_login("Owaiss"));
+//       var_dump($user_role, $user_id);
+//        var_dump(check_login($user_id));
+//        echo "</pre>";
+//    }
     return ob_get_clean();
 }
 

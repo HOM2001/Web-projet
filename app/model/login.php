@@ -8,9 +8,9 @@ function check_login($input)
         $f = fopen("../asset/database/login.csv", "r");
         while (!feof($f)) {
             $line = fgets($f);
-            $user_info = explode("|", trim($line));
+            $user_info = explode(";", trim($line));
             if ($user_info[0] == $input) {
-                echo " Vous avez été indentifié ";
+                echo "Vous avez été indentifié";
 
                 fclose($f);
                 return array(true, $user_info[0], $user_info[2]);

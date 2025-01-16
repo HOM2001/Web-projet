@@ -7,7 +7,7 @@ function html_logout_button()
 {
     ob_start();
     ?>
-    <a href="?page=login &action=logout">log out</a>
+    <a href="?page=login&action=logout">log out</a>
 
     <?php
     return ob_get_clean();
