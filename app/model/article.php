@@ -1,6 +1,6 @@
 <?php
 
-function get_article_a($article_id = 1)
+function get_top_article($article_id = 1)
 {
 
 
@@ -18,12 +18,28 @@ function get_article_a($article_id = 1)
             ident_art = :ident_art ;
 SQL;
 
-    $pdo = get_pdo();
-    $stmt = $pdo->prepare($sql);
-    $params = ['ident_art' => $article_id];
-    $stmt->execute($params);
+    try {
+        $pdo = get_pdo();
+        $stmt = $pdo->prepare($sql);
+        $params = ['ident_art' => $article_id];
+        $stmt->execute($params);
 
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
     return $stmt->fetch();
+}
+
+function get_bottom_article()
+{
+    foreach ([2, 3, 4, 5] as $art_a) {
+        $art_aa [] = get_top_article($art_a);
+
+
+    }
+
+    return $art_aa;
+
 
 
 }

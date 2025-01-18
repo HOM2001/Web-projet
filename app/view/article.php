@@ -32,11 +32,13 @@ function html_all_articles_main($article)
         <?php
         foreach ($article as $art_a) {
             $title = $art_a['title'];
+            $hook = $art_a['hook'];
             $art_id = $art_a['id'];
 
             echo <<< HTML
                 <article>
                     <a href="?page=article&art_id=$art_id"><h1>$title</h1></a>
+                    <h2>$hook</h2>
                 </article>
 HTML;
         }

@@ -6,10 +6,11 @@ function main_home()
 
 {
 
-    $article = get_article_a();
+    $article = get_top_article();
+    $bottom_article = get_bottom_article();
     return join("\n", [
         ctrl_head(),
-        html_body($article),
+        html_home_main($article, $bottom_article),
         html_foot(),
 
     ]);
