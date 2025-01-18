@@ -2,22 +2,22 @@
 /*
  * Database setting
  */
-const SERVER = "home";
+const SERVER = "home"; // school
 
-const DATABASE_TYPE = "Mysql";
+const DATABASE_TYPE = "SQL";
 
-const DATEBASE_NAME = "MyServer";
+const DATEBASE_NAME = "myServer";
 
 switch (SERVER) {
     case "home":
         define("DATABASE_PORT", 3307);
-        define("DATABASE_USERNAME", "Owaiss");
-        define("DATEBASE_PASSWORD", "Owaiss123");
+        define("DATABASE_USERNAME", "root");
+        define("DATEBASE_PASSWORD", "");
         break;
     case "school" :
         define("DATABASE_PORT", 3307);
-        define("DATABASE_USERNAME", "server");
-        define("DATABASE_PASSWORD", "server123");
+        define("DATABASE_USERNAME", "root");
+        define("DATABASE_PASSWORD", "");
         break;
 
 

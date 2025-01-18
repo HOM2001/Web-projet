@@ -14,3 +14,13 @@ function get_menu_csv()
     }
     return $menu_tab;
 }
+
+function get_pdo()
+{
+    static $pdo;
+    if (empty($pdo)) {
+        $pdo = new PDO('mysql:host=localhost;dbname=4ipdw_2023', 'root', 'root');
+        $pdo->query("SET NAMES utf8");
+    }
+    return $pdo;
+}

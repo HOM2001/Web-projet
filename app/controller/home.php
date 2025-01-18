@@ -6,9 +6,10 @@ function main_home()
 
 {
 
+    $article = get_article_a();
     return join("\n", [
         ctrl_head(),
-        html_body(),
+        html_body($article),
         html_foot(),
 
     ]);
