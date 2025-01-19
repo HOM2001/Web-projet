@@ -39,7 +39,9 @@ function get_bottom_article()
     }
 
     return $art_aa;
+}
 
-
-
+function get_all_article()
+{
+    
 }
